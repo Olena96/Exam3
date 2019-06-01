@@ -1,0 +1,78 @@
+.header{
+	background:linear-gradient(to top, rgba(159, 154, 207, 0.5), rgba(159, 154, 207, 0.5)), url('../images/header-bg.jpg') no-repeat bottom center;
+	background-size: cover;
+	min-height: 100vh;
+	padding-top:25px;
+	color: white;
+	text-align: center;
+	&__navigation{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 160px;
+		align-items: center;
+		cursor: pointer;
+
+		@media (max-width: $width-sm)  { 
+		margin-bottom: 80px; }
+	}
+
+	&__title { 
+		font: 700 4rem $title;
+		text-transform: uppercase;
+		padding-bottom: 40px;
+
+	 }
+
+	 &__desc { 
+	 	font: 1.6rem $font;
+	 	font-style:italic;
+	  }
+}
+.menu{
+	position: fixed;
+	right:8%;
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	z-index: 1;
+
+	// @media (min-width: $width-sm) and (max-width: $width-md) { 
+	// }
+
+
+	@media (max-width: $width-md) {
+		flex-direction: column;
+		align-items: flex-end;
+		position: fixed;
+		background: #040f20;
+		top:0;
+		right: -150px;
+		z-index: 99;
+		justify-content: flex-start;
+		padding:20px;
+		transition: all .3s;
+		@include size(150px, 100%);
+	}
+	&__item { 
+	 }
+
+	 &__link { 
+	 		color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font: 600 1.3rem $title;
+
+	&:hover { 
+	border-bottom: 2px solid white;
+	 }
+
+	  }
+}
+
+// SVG 
+.icon { 
+	width: 54px;
+	height: 54px;
+	fill: white;
+
+}
